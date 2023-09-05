@@ -515,9 +515,7 @@ const onPlay = function(data) {
 };
 player.on("timeupdate", (0, _lodashThrottleDefault.default)(onPlay, 1000));
 const currentTime = Number(localStorage.getItem("videoplayer-current-time"));
-player.setCurrentTime(currentTime).then(function(seconds) {
-// seconds = the actual time that the player seeked to
-}).catch(function(error) {
+player.setCurrentTime(currentTime).then(function(seconds) {}).catch(function(error) {
     error.name;
 });
 
