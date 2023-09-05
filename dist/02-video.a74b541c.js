@@ -503,6 +503,18 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"fFZ34":[function(require,module,exports) {
+const iframe = document.querySelector("iframe");
+const player = new Player(iframe);
+const onPlay = function(data) {
+    localStorage.setItem("videoplayer-current-time", data.seconds);
+};
+player.on("timeupdate", _.throttle(onPlay, 1000));
+const currentTime = Number(localStorage.getItem("videoplayer-current-time"));
+player.setCurrentTime(currentTime).then(function(seconds) {
+// seconds = the actual time that the player seeked to
+}).catch(function(error) {
+    error.name;
+});
 
 },{}]},["5rKFT","fFZ34"], "fFZ34", "parcelRequired7c6")
 
