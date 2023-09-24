@@ -529,7 +529,7 @@ function reloadPage() {
         email.value = formData.email || "";
         message.value = formData.message || "";
     }
-} //test
+}
 
 },{"lodash.throttle":"bGJVT","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bGJVT":[function(require,module,exports) {
 var global = arguments[3];
