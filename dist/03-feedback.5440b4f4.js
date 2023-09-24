@@ -508,7 +508,7 @@ var _lodashThrottle = require("lodash.throttle");
 var _lodashThrottleDefault = parcelHelpers.interopDefault(_lodashThrottle);
 const LOCAL_KEY = "feedback-form-state";
 let formData = JSON.parse(localStorage.getItem(LOCAL_KEY)) || {};
-form = document.querySelector(".feedback-form");
+const form = document.querySelector(".feedback-form");
 form.addEventListener("input", (0, _lodashThrottleDefault.default)(storageFormData, 500));
 form.addEventListener("submit", onFormSubmit);
 reloadPage();
